@@ -16,6 +16,10 @@ export class Note {
     set body(newBody) { this[_note_body] = newBody; }
 }
 
+// Esto puede ser mejorado con un nivel de abstraccion mayor.
+// se puede hacer que la clase sea llamada:
+// AbstractStore.
+// Todas las clases que requiere persistencia llamaran a la clase Abstracta
 export class AbstractNotesStore {
     async close() { }
     async update(key, title, body) { }
